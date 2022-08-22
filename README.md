@@ -1,0 +1,2 @@
+## Aplikasi Bookself Dengan Vanila Javascripts
+ini merupakan aplikasi berbasis web yang dibuat dengan menggunakan framework Bootstrap 5 dan vanila javascript yang bertujuan untuk memenuhi tugas kursus `Belajar Membuat Front-End Web untuk Pemula` di Dicoding

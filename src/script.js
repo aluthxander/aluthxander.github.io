@@ -1,7 +1,8 @@
 const formInput = document.querySelector('form.mb-3');
 const tBody = document.querySelectorAll('#book-list');
 const inputCari = document.querySelector('#cari-list');
-const keyStorage = "book-list"
+const notifikasi = document.querySelector('.row .col .alert');
+const keyStorage = "book-list";
 
 // class untuk constructor buku
 class Book {
@@ -53,6 +54,7 @@ class UIwebsite {
         if (el.classList.contains('delete')) {
             el.parentElement.parentElement.remove();
             Store.deleteLocalStorage(el.parentElement.parentElement.children[2].textContent);
+            this.alertPop('danger', 'Buku berhasil dihapus dari tabel!');
         } else if (el.classList.contains('complite')) {
             const title = el.parentElement.parentElement.children[0].textContent;
             const author = el.parentElement.parentElement.children[1].textContent;
@@ -62,6 +64,7 @@ class UIwebsite {
             const book = new Book(title, author, isbn, status);
             // menyisipkan buku ke table 'selesai membaca'
             this.addBook(book);
+            this.alertPop('success', `Buku ${title} selesai dibaca!`)
             // melakukan perubahan pada local storage
             Store.changeLocalStorage(isbn, status);
             // menghapus buku pada table 'belum dibaca'
@@ -75,15 +78,24 @@ class UIwebsite {
             const book = new Book(title, author, isbn, status);
             // menambahkan buku ke table 'belum dibaca'
             this.addBook(book);
+            this.alertPop('info', `Buku ${title} berhasil dipindahkan`);
             // melakukan perubahan pada local storage
             Store.changeLocalStorage(isbn, status);
             // menghapus buku pada table 'selesai dibaca'
             el.parentElement.parentElement.remove();
         }
     }
+    // method menampilkan popup notifikasi
+    static alertPop(tipe, text){
+        notifikasi.textContent = text;
+        notifikasi.classList = `alert alert-${tipe}`;
+        setTimeout(()=>{
+            notifikasi.classList.add("pop");
+        },1500);
+    }
 }
 
-class Store{
+class Store {
     // mengambil data dari local storage
     static getBooks() {
         let books;
@@ -102,10 +114,10 @@ class Store{
         localStorage.setItem(keyStorage, JSON.stringify(list));
     }
     // menghapus data dari local storage
-    static deleteLocalStorage(textData){
+    static deleteLocalStorage(textData) {
         const list = this.getBooks();
 
-        list.forEach((konten,index)=>{
+        list.forEach((konten, index) => {
             if (textData === konten.isbn) {
                 list.splice(index, 1);
             }
@@ -113,19 +125,19 @@ class Store{
         localStorage.setItem(keyStorage, JSON.stringify(list));
     }
     // method mengubah data pada local storage
-    static changeLocalStorage(textData, status){
+    static changeLocalStorage(textData, status) {
         const list = this.getBooks();
 
-        list.forEach((konten, index)=>{
-            if (textData === konten.isbn){
-                if(status){
-                    list.splice(index,1,{
-                        title : konten.title,
-                        author : konten.author,
-                        isbn : konten.isbn,
-                        status : status,
+        list.forEach((konten, index) => {
+            if (textData === konten.isbn) {
+                if (status) {
+                    list.splice(index, 1, {
+                        title: konten.title,
+                        author: konten.author,
+                        isbn: konten.isbn,
+                        status: status,
                     });
-                }else{
+                } else {
                     list.splice(index, 1, {
                         title: konten.title,
                         author: konten.author,
@@ -139,10 +151,10 @@ class Store{
     }
 }
 // load data pada local storage
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', () => {
     const list = Store.getBooks();
 
-    list.forEach((el)=>{
+    list.forEach((el) => {
         UIwebsite.addBook(el);
     });
 });
@@ -157,7 +169,7 @@ formInput.addEventListener('submit', (e) => {
 
     // jika input button kosong
     if (title === '' || author === '' || isbn === '') {
-        alert('Tolong masukan data buku anda!');
+        UIwebsite.alertPop('info','Silahkan lengkapi data buku anda!');
     } else {
         const book = new Book(title, author, isbn, status);
         // menambahkan buku ke tabel
@@ -165,6 +177,7 @@ formInput.addEventListener('submit', (e) => {
         // menambahkan buku ke localStorage
         Store.addLocalStorage(book);
         // membersihkan input form
+        UIwebsite.alertPop('success', 'Data buku berhasil ditambahkan!')
         UIwebsite.clearInputForm();
     }
 });

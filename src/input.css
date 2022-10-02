@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    html{
+        font-family: 'Roboto', sans-serif;
+    }
+}
+/*====================== header =================================*/ 
+.Header{
+    @apply bg-transparent absolute top-0 left-0 w-full flex items-center justify-center z-10 px-5 py-5 transition duration-500 ease-in-out;
+}
+
+.Header.sticky{
+    @apply fixed bg-body py-0;
+    box-shadow:inset 0 -1px 0 0 rgba(0,0,0,0.2);
+}
+
+.navMenu {
+    @apply py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full mt-3 bg-opacity-80 backdrop-blur-sm lg:mt-0 lg:bg-opacity-100 lg:backdrop-blur-none lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none;
+}
+
+.hamburger-line {
+    @apply w-[30px] h-[2px] my-2 block bg-white transition duration-500;
+}
+
+.Header.sticky .container div div:nth-child(2) button .hamburger-line{
+    @apply bg-black;
+}
+
+.hamburger-active > span:nth-child(1){
+    @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2){
+    @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3){
+    @apply -rotate-45;
+}
+.itemNav{
+    @apply font-semibold text-secondary  py-2 mx-4 tracking-widest capitalize flex hover:text-sky-500 transition duration-300 lg:text-white lg:text-base;
+}
+
+.Header.sticky .container #nav-menu ul li .itemNav{
+    @apply lg:text-slate-900 hover:text-sky-500;
+}
+
+#dark-toggle:checked ~ label div.toggle-circle {
+    @apply translate-x-3;
+}
+
+.textMode{
+@apply text-sm text-slate-500 lg:text-slate-300 transition duration-500;
+}
+
+.Header.sticky .container #nav-menu ul li div .textMode{
+@apply lg:text-slate-600;
+}
+
+/*====================== carousel ==============================*/
+.slide{
+@apply absolute w-full h-full opacity-0;
+}
+
+.slide.active{
+@apply transition duration-500 opacity-100;
+}
+
+.images{
+@apply absolute w-full h-full object-cover;
+}
+
+.info{
+@apply relative w-4/5  p-5 rounded-md mt-40 ml-auto mr-auto md:absolute md:w-3/4 md:top-32 md:left-14 md:mt-0;
+color: #222;
+background: rgba(255, 255, 255, 0.8);
+box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+}
+
+.info h2{
+@apply text-xl leading-10 font-extrabold lg:text-3xl lg:mb-1;
+}
+
+.info p{
+@apply text-base font-normal md:text-lg;
+}
+
+.buttn{
+@apply text-[2em] text-secondary opacity-80 p-3 cursor-pointer;
+background: rgba(255, 255, 255, 0.8);
+}
+
+.navigation-visibility{
+@apply flex justify-center mt-20;
+}
+
+.slide-icon{
+@apply opacity-80 w-5 h-2 mx-1 rounded-full;
+transform: translateY(-50px);
+background: rgba(255, 255, 255, 0.8);
+box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+.slide-icon.active{
+@apply bg-fourty;
+}
+
+/*============================= About ===============================*/
+.containerOut{
+    @apply w-full pt-24 bg-body flex justify-center px-3;
+}
+.title{
+    @apply w-full text-center flex flex-col justify-center items-center mb-10;
+}
+
+.textTitle{
+    @apply relative uppercase tracking-[2px] text-2xl mb-1 font-bold text-secondary;
+}
+
+.about1{
+    @apply flex flex-wrap justify-between overflow-hidden lg:-mt-16;
+}
+
+.line{
+    @apply w-24 h-[2px] bg-secondary;
+}
+
+.buttonBase{
+    @apply text-base font-semibold tracking-wider text-white bg-fourty py-3 w-full flex justify-center rounded-full hover:shadow-lg hover:bg-fourty2 transition duration-300 ease-in-out sm:w-52;
+}
+
+.infoAbout{
+    @apply w-full self-center px-4 md:w-1/2 translate-y-14 opacity-0 transition duration-1000 ease-linear md:translate-y-0 md:-translate-x-14;
+}
+
+.image1{
+    @apply w-full self-start px-4 md:w-1/2;
+}
+
+#about .container div .infoAbout.active{
+    @apply translate-y-0 opacity-100 md:translate-x-0;
+}
+
+.about2 {
+    @apply overflow-hidden px-4 flex flex-wrap md:pb-20 md:mt-24 xl:pb-0;
+}
+
+.image2{
+    @apply hidden w-full self-start rounded-lg overflow-hidden shadow-lg lg:w-1/2 lg:block;
+}
+
+.infoAbout2 {
+    @apply w-full self-start flex flex-col justify-between text-justify mt-10 translate-y-14 opacity-0 transition duration-1000 ease-linear md:flex-row md:gap-8 md:mt-0 lg:gap-0 lg:translate-y-0 lg:translate-x-14 lg:flex-col lg:w-1/2 lg:pl-8 xl:pl-16;
+}
+
+#about .container .about2 .infoAbout2.active{
+    @apply translate-x-0 translate-y-0 opacity-100;
+}
+
+.mediaSocial{
+    @apply w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-secondary text-secondary text-xl hover:border-fourty2 hover:bg-fourty hover:text-white;
+}
+
+/*========================= portofolio ==============================*/
+.titleContent{
+    @apply text-center font-medium text-primary text-lg lg:text-xl;
+}
+
+.content{
+    @apply grid grid-cols-1 gap-5 mb-10 mt-5 mx-0 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.workBx{
+    @apply relative w-full h-[300px] rounded-lg overflow-hidden shadow-lg translate-y-14 opacity-0 transition duration-500;
+}
+
+.workBx.active{
+    @apply translate-y-0 opacity-100;
+}
+
+.imgBx{
+    @apply relative w-full h-full translate-y-0 transition duration-500 ease-in-out;
+}
+
+.imagesProject{
+    @apply absolute top-0 left-0 w-full h-full object-cover;
+}
+
+.textBx{
+    @apply absolute top-0 left-0 w-full h-full px-6 bg-third flex flex-col justify-center items-center translate-y-full transition duration-500 ease-in-out;
+}
+
+.titleProject{
+    @apply self-start mb-4 text-secondary text-xl font-bold;
+}
+
+.detailProject{
+    @apply text-base text-justify pb-2 text-primary h-1/2 overflow-hidden;
+}
+
+.btnProject{
+    @apply w-full flex justify-between;
+}
+
+.linkProject{
+    @apply relative py-2 px-4 text-primary capitalize text-sm border-solid border-2 border-secondary rounded-lg overflow-hidden hover:text-white;
+}
+
+/* ================================== contact ===================================== */
+.wrapForm{
+    @apply w-full px-4 mb-6;
+}
+
+.labelContact{
+    @apply text-base font-bold text-secondary;
+}
+
+.inputContact{
+    @apply w-full text-base bg-third text-primary p-3 rounded-md;
+}

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio III</title>
+
+    <link rel="stylesheet" href="./dist/css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3c767aa28f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- header start -->
+    <header class="Header">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4">
+                    <a href="#slider" class="text-2xl font-extrabold text-sky-500 block py-6">LutfanHaq</a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-5 lg:hidden">
+                        <span class="hamburger-line transition duration-200 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-200 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-200 ease-in-out origin-bottom-left"></span>
+                    </button>
+
+                    <nav id="nav-menu" class="hidden absolute navMenu">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#slider" class="itemNav">Home</a>
+                            </li>
+                            <li class="group">
+                                <a href="#about" class="itemNav">About</a>
+                            </li>
+                            <li class="group">
+                                <a href="#portofolio" class="itemNav">portfolio</a>
+                            </li>
+                            <li class="group">
+                                <a href="#contact" class="itemNav">contact</a>
+                            </li>
+                            <li class="hidden mt-3 lg:mt-0 items-center pl-5">
+                                <div class="flex">
+                                    <span class="mr-2 textMode">light</span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle">
+                                    <label for="dark-toggle">
+                                        <div
+                                            class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-400 lg:text-slate-300 p-1">
+                                            <div
+                                                class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out">
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <span class="ml-2 textMode">dark</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- carousel start -->
+    <div class="relative bg-slate-900 w-full h-[100vh] overflow-hidden group" id="slider">
+        <div class="slide active">
+            <img src="./dist/img/web_developer.jpg" alt="Web developer" class="images">
+            <div class="info">
+                <h2>Web Development</h2>
+                <p>Come with me to build a beautiful and responsive website.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="./dist/img/AI.jpg" alt="machine learning" class="images">
+            <div class="info">
+                <h2>Artificial Intelligence</h2>
+                <p>Come on, together contribute to the development of the world's artificial intelligence!</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="./dist/img/IoT2.jpg" alt="Internet Of Things" class="images">
+            <div class="info">
+                <h2>Internet of Things</h2>
+                <p>Create advanced Internet of Things systems to make life easier.</p>
+            </div>
+        </div>
+        <div
+            class="h-[500px] flex items-center justify-between mt-20 opacity-100 transition duration-300 ease-in-out md:opacity-0 group-hover:opacity-100">
+            <i class="fas fa-chevron-left prev-btn buttn rounded-r-md"></i>
+            <i class="fas fa-chevron-right next-btn buttn rounded-l-md"></i>
+        </div>
+        <div class="navigation-visibility">
+            <div class="slide-icon active"></div>
+            <div class="slide-icon"></div>
+            <div class="slide-icon"></div>
+        </div>
+    </div>
+    <!-- carousel end -->
+
+
+    <!-- about start -->
+
+    <section id="about" class="containerOut">
+        <div class="container">
+            <div class="title">
+                <h2 class="textTitle">About Me</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about1">
+                <div class="infoAbout">
+                    <h1 class="text-base font-normal mb-1 text-primary md:text-lg">Hi everyone, introduce me:
+                        <span class="block font-bold text-fourty text-3xl lg:text-4xl">Lutfan Zainul Haq</span>
+                    </h1>
+                    <h2 class="font-medium text-primary text-lg mb-5 lg:text-2xl">Frond-end Developer | Machine
+                        Learning Engineering | Electrical Engineering</h2>
+                    <h3 class="text-lg font-bold text-secondary md:text-2xl">Visi : </h3>
+                    <p class="font-normal text-primary mb-6 leading-relaxed md:text-lg">"Let's keep learning to achieve
+                        success"</p>
+                    <a href="#" class="buttonBase">Download
+                        CV</a>
+                </div>
+                <div class="image1">
+                    <div class="mt-10 relative lg:mt-9 lg:right-0">
+                        <span class="absolute bottom-0 md:-translate-x-28 md:scale-90 lg:translate-x-0 lg:scale-125">
+                            <svg width="500" height="500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#3AB4F2"
+                                    d="M65.3,-42.7C74.9,-21,66.4,6.2,52.5,29.4C38.6,52.7,19.3,71.9,-0.8,72.4C-21,72.9,-41.9,54.6,-49.5,35C-57.1,15.4,-51.4,-5.5,-40.9,-27.6C-30.4,-49.8,-15.2,-73.2,6.3,-76.8C27.8,-80.5,55.6,-64.3,65.3,-42.7Z"
+                                    transform="translate(100 100) scale(1.1)" />
+                            </svg>
+                        </span>
+                        <img src="./dist/img/personal.png" alt="Lutfan" class="relative max-w-full mx-auto">
+                    </div>
+                </div>
+            </div>
+
+            <div class="about2">
+                <div class="image2">
+                    <div>
+                        <img src="./dist/img/personal2.jpg" alt="Lutfan" class="max-w-full mx-auto">
+                    </div>
+                </div>
+                <div class="infoAbout2">
+                    <div class="w-full mb-10 md:mb-0 md:w-1/2 lg:w-full xl:mb-10">
+                        <h2 class="font-bold text-fourty text-2xl mb-5 w-full xl:text-4xl">Let me introduce myself
+                            more deeply</h2>
+                        <p class="font-medium text-base text-primary max-w-xl lg:text-lg">I am a student majoring in
+                            Electrical Engineering, Sultan Agung Islamic University, Semarang. Proficient in several
+                            programming languages. has experience in front end developer, Machine Learning, robotics,
+                            and IoT. have attended Bangkit academy machine learning path.</p>
+                    </div>
+                    <div class="w-full md:w-1/2 lg:w-full">
+                        <h3 class="font-semibold text-fourty text-xl mb-4 md:text-2xl lg:pt-10 xl:text-3xl">Let's be
+                            friends
+                        </h3>
+                        <p class="font-medium text-base text-primary mb-6 lg:text-lg">follow my social media to know
+                            my daily life
+                        </p>
+                        <div class="flex items-center">
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/invites/contact/?i=15krjl466fr3f&utm_content=czix9vd"
+                                target="_blank" class="mediaSocial">
+                                <i class="fa-brands fa-instagram"></i></a>
+                            <!-- Linkid -->
+                            <a href="https://www.linkedin.com/in/lutfan-zainul-haq-4373bb222" target="_blank"
+                                class="mediaSocial"><i class="fa-brands fa-linkedin"></i></a>
+                            <!-- Github -->
+                            <a href="https://github.com/aluthxander" target="_blank" class="mediaSocial"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <!-- twitter -->
+                            <!-- <a href="https://twitter.com" target="_blank" class="mediaSocial"><i
+                                    class="fa-brands fa-twitter"></i>
+                            </a> -->
+                            <!-- facebook -->
+                            <!-- <a href="https://twitter.com" target="_blank" class="mediaSocial"><i
+                                    class="fa-brands fa-facebook-f"></i>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about end -->
+
+    <!-- Portfolio start -->
+    <section id="portofolio" class="containerOut">
+        <div class="container px-4">
+            <div class="title">
+                <h2 class="textTitle">Portofolio</h2>
+                <div class="line"></div>
+            </div>
+            <h2 class="titleContent">Front End Web</h2>
+            <div class="content frondEnd">
+                <div class="workBx group">
+                    <div class="imgBx group-hover:-translate-y-full">
+                        <img src="./dist/img/portofolio/project1.jpg" alt="Project 1" class="imagesProject">
+                    </div>
+                    <div class="textBx group-hover:translate-y-0">
+                        <h3 class="titleProject">Stiky Notes</h3>
+                        <p class="detailProject">This project is a web-based notepad created using CSS and vanilla
+                            javascript and uses a local storage browser to store data.</p>
+                        <div class="btnProject">
+                            <a href="https://github.com/aluthxander/stikyNotes.git" target="_blank" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left"><i class="fa-solid fa-code"></i> code</a>
+                            <a href="https://aluthxander.github.io/stikyNotes/" target="_blank" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left">Link App</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="workBx group">
+                    <div class="imgBx group-hover:-translate-y-full">
+                        <img src="./dist/img/portofolio/project2.jpg" alt="Project 1" class="imagesProject">
+                    </div>
+                    <div class="textBx group-hover:translate-y-0">
+                        <h3 class="titleProject">Project 02</h3>
+                        <p class="detailProject">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
+                            quasi illo fugit corrupti aperiam reprehenderit neque, iure architecto doloremque enim quis
+                            impedit aspernatur explicabo modi quidem consectetur laboriosam laborum itaque. Expedita
+                            sunt natus eum est!</p>
+                        <div class="btnProject">
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left"><i class="fa-solid fa-code"></i> code</a>
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left">Link App</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="workBx group">
+                    <div class="imgBx group-hover:-translate-y-full">
+                        <img src="./dist/img/portofolio/project3.jpg" alt="Project 1" class="imagesProject">
+                    </div>
+                    <div class="textBx group-hover:translate-y-0">
+                        <h3 class="titleProject">Project 03</h3>
+                        <p class="detailProject">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae minus
+                            nulla veniam. Odit soluta neque inventore reiciendis rem tempore nam impedit repellendus. Id
+                            qui neque voluptates impedit aspernatur odio repudiandae.</p>
+                        <div class="btnProject">
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left"><i class="fa-solid fa-code"></i> code</a>
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left">Link App</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="titleContent">Machine Learning</h2>
+            <div class="content machineLearning">
+                <div class="workBx group">
+                    <div class="imgBx group-hover:-translate-y-full">
+                        <img src="./dist/img/portofolio/project4.jpg" alt="Project 1" class="imagesProject">
+                    </div>
+                    <div class="textBx group-hover:translate-y-0">
+                        <h3 class="titleProject">Project 01</h3>
+                        <p class="detailProject">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quas
+                            atque nam qui, expedita voluptatum. Explicabo architecto iste quis ullam.</p>
+                        <div class="btnProject">
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left"><i class="fa-solid fa-code"></i> code</a>
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left">documentation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="workBx group">
+                    <div class="imgBx group-hover:-translate-y-full">
+                        <img src="./dist/img/portofolio/project5.jpg" alt="Project 1" class="imagesProject">
+                    </div>
+                    <div class="textBx group-hover:translate-y-0">
+                        <h3 class="titleProject">Project 02</h3>
+                        <p class="detailProject">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
+                            quasi illo fugit corrupti aperiam reprehenderit neque, iure architecto doloremque enim quis
+                            impedit aspernatur explicabo modi quidem consectetur laboriosam laborum itaque. Expedita
+                            sunt natus eum est!</p>
+                        <div class="btnProject">
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left"><i class="fa-solid fa-code"></i> code</a>
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left">documentation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="workBx group">
+                    <div class="imgBx group-hover:-translate-y-full">
+                        <img src="./dist/img/portofolio/project6.jpg" alt="Project 1" class="imagesProject">
+                    </div>
+                    <div class="textBx group-hover:translate-y-0">
+                        <h3 class="titleProject">Project 03</h3>
+                        <p class="detailProject">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae minus
+                            nulla veniam. Odit soluta neque inventore reiciendis rem tempore nam impedit repellendus. Id
+                            qui neque voluptates impedit aspernatur odio repudiandae.</p>
+                        <div class="btnProject">
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left"><i class="fa-solid fa-code"></i> code</a>
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left">documentation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="titleContent">Robot dan IoT</h2>
+            <div class="content robot_Iot">
+                <div class="workBx group">
+                    <div class="imgBx group-hover:-translate-y-full">
+                        <img src="./dist/img/portofolio/project7.jpg" alt="Project 1" class="imagesProject">
+                    </div>
+                    <div class="textBx group-hover:translate-y-0">
+                        <h3 class="titleProject">Project 01</h3>
+                        <p class="detailProject">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quas
+                            atque nam qui, expedita voluptatum. Explicabo architecto iste quis ullam.</p>
+                        <div class="btnProject">
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left"><i class="fa-solid fa-code"></i> code</a>
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left">more <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="workBx group">
+                    <div class="imgBx group-hover:-translate-y-full">
+                        <img src="./dist/img/portofolio/project8.jpg" alt="Project 1" class="imagesProject">
+                    </div>
+                    <div class="textBx group-hover:translate-y-0">
+                        <h3 class="titleProject">Project 02</h3>
+                        <p class="detailProject">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
+                            quasi illo fugit corrupti aperiam reprehenderit neque, iure architecto doloremque enim quis
+                            impedit aspernatur explicabo modi quidem consectetur laboriosam laborum itaque. Expedita
+                            sunt natus eum est!</p>
+                        <div class="btnProject">
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left"><i class="fa-solid fa-code"></i> code</a>
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left">more <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="workBx group">
+                    <div class="imgBx group-hover:-translate-y-full">
+                        <img src="./dist/img/portofolio/project9.jpg" alt="Project 1" class="imagesProject">
+                    </div>
+                    <div class="textBx group-hover:translate-y-0">
+                        <h3 class="titleProject">Project 03</h3>
+                        <p class="detailProject">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae minus
+                            nulla veniam. Odit soluta neque inventore reiciendis rem tempore nam impedit repellendus. Id
+                            qui neque voluptates impedit aspernatur odio repudiandae.</p>
+                        <div class="btnProject">
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left"><i class="fa-solid fa-code"></i> code</a>
+                            <a href="#" class="linkProject before:contents-[''] before:absolute before:top-0 before:left-0
+                                before:h-full before:w-[55%] before:bg-secondary before:-z-10 before:scale-x-0
+                                before:transition-transform before:duration-500 before:origin-left
+                                hover:before:scale-x-100 hover:before:transition-transform hover:before:duration-500
+                                hover:before:origin-right after:contents-[''] after:absolute after:top-0 after:right-0
+                                after:h-full after:w-[55%] after:bg-secondary after:-z-10 after:scale-x-0
+                                after:transition-transform after:duration-500 after:origin-right
+                                hover:after:scale-x-100 hover:after:transition-transform hover:after:duration-500
+                                hover:after:origin-left">more <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio end -->
+
+    <!-- Contact start -->
+    <section id="contact" class="containerOut">
+        <div class="container">
+            <div class="title">
+                <h2 class="textTitle">Contact Me</h2>
+                <div class="line"></div>
+            </div>
+            <div class="max-w-xl mx-auto text-center">
+                <p class="font-medium text-base text-primary">Contact me if you need help or want
+                    to know more about me</p>
+            </div>
+            <form>
+                <div class="w-full md:w-2/3 md:mx-auto">
+                    <div class="wrapForm">
+                        <label for="name" class="labelContact">Name</label>
+                        <input type="text" id="name" class="inputContact focus:outline-none focus:ring-fourty focus:ring-1
+                            focus:border-fouring-fourty">
+                    </div>
+                    <div class="wrapForm">
+                        <label for="email" class="labelContact">Email</label>
+                        <input type="email" id="email" class="inputContact focus:outline-none focus:ring-fourty focus:ring-1
+                            focus:border-fouring-fourty">
+                    </div>
+                    <div class="wrapForm">
+                        <label for="message" class="labelContact">Pesan</label>
+                        <textarea type="text" id="email" class="inputContact focus:outline-none focus:ring-fourty focus:ring-1
+                            focus:border-fouring-fourty h-36"></textarea>
+                    </div>
+                    <div class="wrapForm flex justify-center">
+                        <button class="buttonBase">Kirim</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Contact end -->
+
+    <!-- footer start -->
+    <footer class="h-full mb-0 pb-3 pt-10 px-10 text-center bg-slate-100">
+        <p class="text-base font-normal">Copyright &copy; 2022 By Lutfan Zainul Haq</p>
+    </footer>
+    <!-- footer end -->
+    <script src="./dist/js/scripts.js"></script>
+</body>
+
+</html>

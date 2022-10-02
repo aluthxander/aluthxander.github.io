@@ -1,8 +1,0 @@
-.row .col .alert{
-    opacity: 1;
-    transition: .3s;
-}
-
-.row .col .alert.pop{
-    opacity: 0;
-}

@@ -437,25 +437,25 @@
                 <p class="font-medium text-base text-primary">Contact me if you need help or want
                     to know more about me</p>
             </div>
-            <form>
+            <form action="https://formspree.io/f/xknezrdy" method="POST">
                 <div class="w-full md:w-2/3 md:mx-auto">
                     <div class="wrapForm">
                         <label for="name" class="labelContact">Name</label>
-                        <input type="text" id="name" class="inputContact focus:outline-none focus:ring-fourty focus:ring-1
-                            focus:border-fouring-fourty">
+                        <input type="text" id="name" name="Name" class="inputContact focus:outline-none focus:ring-fourty focus:ring-1
+                            focus:border-fouring-fourty" required>
                     </div>
                     <div class="wrapForm">
                         <label for="email" class="labelContact">Email</label>
-                        <input type="email" id="email" class="inputContact focus:outline-none focus:ring-fourty focus:ring-1
-                            focus:border-fouring-fourty">
+                        <input type="email" id="email" name="Email" class="inputContact focus:outline-none focus:ring-fourty focus:ring-1
+                            focus:border-fouring-fourty" required>
                     </div>
                     <div class="wrapForm">
                         <label for="message" class="labelContact">Pesan</label>
-                        <textarea type="text" id="email" class="inputContact focus:outline-none focus:ring-fourty focus:ring-1
+                        <textarea type="text" id="email" name="Massage" class="inputContact focus:outline-none focus:ring-fourty focus:ring-1
                             focus:border-fouring-fourty h-36"></textarea>
                     </div>
                     <div class="wrapForm flex justify-center">
-                        <button class="buttonBase">Kirim</button>
+                        <button class="buttonBase" type="submit">Kirim</button>
                     </div>
                 </div>
             </form>

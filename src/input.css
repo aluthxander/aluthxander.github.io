@@ -89,7 +89,7 @@ box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
 }
 
 .buttn{
-@apply text-[2em] text-secondary opacity-80 p-3 cursor-pointer;
+@apply opacity-80 p-3 cursor-pointer;
 background: rgba(255, 255, 255, 0.8);
 }
 
